@@ -73,10 +73,9 @@ public class UserResourceTest {
 
         TestUtil.mockSecurityContext("admin", Arrays.asList());
 
-        // todo fix test
-//        restUserMockMvc.perform(post("/app/rest/users/admin/ban")
-//                .accept(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isBadRequest());
+        restUserMockMvc.perform(post("/app/rest/users/admin/ban")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
     }
 
     @Test
